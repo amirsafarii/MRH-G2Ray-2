@@ -12,11 +12,8 @@
       "version": "latest"
     }
   },
-  "postAttachCommand": {
-    "public": "gh codespace ports visibility 443:public 8080:public -c $CODESPACE_NAME",
-    "xray": "/usr/local/bin/start-xray.sh",
-    "admin": "/usr/local/bin/start-admin.sh"
-  },
+  "postStartCommand": "bash /usr/local/bin/start-all.sh"
+,
   "portsAttributes": {
     "443": {
       "label": "xray",
